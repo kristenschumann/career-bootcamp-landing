@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Land Your Job with AI Agents and Human Relationships | Leland Career Bootcamp</title>
+  <meta name="description" content="6 live sessions. Build AI systems to find opportunities. Master the human skills that close offers. Walk away with real tools, real connections, and a portfolio that proves you're AI-native.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333333;
+      background: #ffffff;
+    }
+
+    img { max-width: 100%; height: auto; }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Eyebrow ── */
+    .eyebrow {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #15B078;
+    }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-block;
+      background: #15B078;
+      color: #ffffff;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      padding: 16px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background: #12995e;
+      transform: translateY(-1px);
+    }
+
+    /* ════════════════════════════════════════
+       1. HERO
+    ════════════════════════════════════════ */
+    .hero {
+      background: #113A2D;
+      color: #ffffff;
+      padding: 48px 0 80px;
+    }
+    .hero .logo {
+      margin-bottom: 56px;
+    }
+    .hero .logo svg {
+      width: 120px;
+      height: auto;
+    }
+    .hero .eyebrow {
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      max-width: 720px;
+    }
+    .hero .subheadline {
+      font-size: 20px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.8);
+      max-width: 640px;
+      margin-bottom: 40px;
+    }
+    .hero .cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .hero .cta-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ════════════════════════════════════════
+       2. STATS BAR
+    ════════════════════════════════════════ */
+    .stats {
+      padding: 64px 0;
+      background: #ffffff;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 40px;
+      font-weight: 700;
+      color: #15B078;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 16px;
+      color: #707070;
+      line-height: 1.5;
+    }
+    .stats .bridge {
+      text-align: center;
+      font-size: 20px;
+      color: #333333;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ════════════════════════════════════════
+       3. SESSIONS
+    ════════════════════════════════════════ */
+    .sessions {
+      padding: 80px 0;
+      background: #F8F8F8;
+    }
+    .sessions h2 {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .sessions .section-sub {
+      text-align: center;
+      color: #707070;
+      font-size: 18px;
+      margin-bottom: 48px;
+    }
+    .session-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .session-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 32px;
+      border: 1px solid #E5E5E5;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: box-shadow 0.2s ease;
+    }
+    .session-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .session-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #15B078;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .session-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .session-card .desc {
+      font-size: 16px;
+      color: #707070;
+      line-height: 1.5;
+    }
+    .session-card .deliverable {
+      font-size: 15px;
+      font-weight: 600;
+      color: #15B078;
+      padding-top: 4px;
+      border-top: 1px solid #E5E5E5;
+      margin-top: auto;
+    }
+
+    /* ════════════════════════════════════════
+       4. COACHES
+    ════════════════════════════════════════ */
+    .coaches {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .coaches h2 {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .coaches .section-sub {
+      text-align: center;
+      color: #707070;
+      font-size: 18px;
+      margin-bottom: 48px;
+    }
+    .coach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .coach-card {
+      background: #F8F8F8;
+      border-radius: 12px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .coach-session-tag {
+      font-size: 13px;
+      font-weight: 600;
+      color: #15B078;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .coach-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .coach-card h3 a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .coach-card h3 a:hover {
+      color: #15B078;
+    }
+    .coach-card .coach-title {
+      font-size: 15px;
+      color: #707070;
+      line-height: 1.4;
+    }
+    .coach-card .coach-cred {
+      font-size: 15px;
+      color: #333333;
+      line-height: 1.5;
+    }
+    .coach-review {
+      font-size: 14px;
+      font-style: italic;
+      color: #707070;
+      line-height: 1.5;
+      padding: 10px 0;
+      border-top: 1px solid #E5E5E5;
+    }
+    .coach-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333333;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+    .stars {
+      color: #F5A623;
+      letter-spacing: 1px;
+    }
+    .coach-profile-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #15B078;
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+    .coach-profile-link:hover {
+      opacity: 0.8;
+    }
+
+    /* ════════════════════════════════════════
+       5. DIFFERENTIATORS
+    ════════════════════════════════════════ */
+    .differentiators {
+      padding: 80px 0;
+      background: #113A2D;
+      color: #ffffff;
+    }
+    .differentiators h2 {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    .diff-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .diff-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(21, 176, 120, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    .diff-text h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .diff-text p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+
+    /* ════════════════════════════════════════
+       6. AI CREDIT BONUS
+    ════════════════════════════════════════ */
+    .ai-credit {
+      padding: 64px 0;
+      background: rgba(21, 176, 120, 0.12);
+    }
+    .ai-credit-inner {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .ai-credit h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .ai-credit p {
+      font-size: 18px;
+      color: #707070;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    /* ════════════════════════════════════════
+       7. WHO THIS IS FOR
+    ════════════════════════════════════════ */
+    .audience {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .audience h2 {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .audience-card {
+      background: #F8F8F8;
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+    }
+    .audience-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+    .audience-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .audience-card p {
+      font-size: 16px;
+      color: #707070;
+      line-height: 1.5;
+    }
+
+    /* ════════════════════════════════════════
+       8. FAQ
+    ════════════════════════════════════════ */
+    .faq {
+      padding: 80px 0;
+      background: #F8F8F8;
+    }
+    .faq h2 {
+      font-size: 32px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid #E5E5E5;
+    }
+    .faq-item:first-child {
+      border-top: 1px solid #E5E5E5;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 0;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #333333;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-question:hover {
+      color: #15B078;
+    }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.25s ease;
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 0 20px;
+      font-size: 16px;
+      color: #707070;
+      line-height: 1.6;
+    }
+
+    /* ════════════════════════════════════════
+       9. FINAL CTA
+    ════════════════════════════════════════ */
+    .final-cta {
+      padding: 80px 0;
+      background: #113A2D;
+      color: #ffffff;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .final-cta .price {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .final-cta .includes {
+      font-size: 18px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 32px;
+    }
+    .final-cta .btn-primary {
+      margin-bottom: 16px;
+    }
+    .final-cta .contact {
+      font-size: 15px;
+      color: rgba(255,255,255,0.5);
+    }
+    .final-cta .contact a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: underline;
+    }
+
+    /* ════════════════════════════════════════
+       10. FOOTER
+    ════════════════════════════════════════ */
+    .footer {
+      padding: 32px 0;
+      background: #0D2E23;
+      text-align: center;
+    }
+    .footer svg {
+      width: 80px;
+      height: auto;
+      opacity: 0.5;
+      margin-bottom: 8px;
+    }
+    .footer p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* ════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 36px; }
+      .hero .subheadline { font-size: 18px; }
+      .stats-grid { grid-template-columns: 1fr; gap: 32px; }
+      .stat-number { font-size: 32px; }
+      .session-grid { grid-template-columns: 1fr; }
+      .coach-grid { grid-template-columns: 1fr; }
+      .diff-grid { grid-template-columns: 1fr; }
+      .audience-grid { grid-template-columns: 1fr; }
+      .final-cta .price { font-size: 40px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 32px 0 56px; }
+      .hero .logo { margin-bottom: 40px; }
+      .hero h1 { font-size: 28px; }
+      .hero .subheadline { font-size: 16px; }
+      .btn-primary { font-size: 16px; padding: 14px 32px; }
+      .sessions, .coaches, .differentiators, .audience, .faq, .final-cta { padding: 56px 0; }
+      .sessions h2, .coaches h2, .differentiators h2, .audience h2, .faq h2, .ai-credit h2 { font-size: 26px; }
+      .session-card { padding: 24px; }
+      .coach-card { padding: 24px; }
+      .final-cta h2 { font-size: 28px; }
+      .final-cta .price { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════ 1. HERO ═══════ -->
+  <section class="hero">
+    <div class="container">
+      <div class="logo">
+        <svg width="200" height="45" viewBox="0 0 200 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M41.0778 3.86523L13.0702 12.2675L3.73438 41.2086L32.6755 32.8064L41.0778 3.86523ZM22.4056 27.2048C24.9836 27.2048 27.0735 25.1149 27.0735 22.5369C27.0735 19.9588 24.9836 17.8689 22.4056 17.8689C19.8276 17.8689 17.7377 19.9588 17.7377 22.5369C17.7377 25.1149 19.8276 27.2048 22.4056 27.2048Z" fill="white"/>
+          <path d="M162.705 24.9972V38.1671H169.214V23.5735C169.214 17.675 167.434 13.0986 160.366 13.0986C156.807 13.0986 154.315 14.6749 152.993 17.2682H152.841L152.891 13.5563H146.383V38.1671H152.891V25.9125C152.891 21.7938 154.264 18.4378 158.281 18.4378C162.044 18.4378 162.705 21.3361 162.705 24.9972Z" fill="white"/>
+          <path d="M134.451 35.3196L134.553 38.1671H140.807V24.082C140.807 19.9124 139.892 17.675 138.112 15.9462C136.282 14.2173 133.79 13.0986 129.417 13.0986C125.146 13.0986 121.688 14.5732 119.807 15.6919L121.79 19.8615C122.858 19.0479 125.553 17.8276 128.807 17.8276C132.214 17.8276 134.299 19.3022 134.299 22.4548V23.1158L128.4 23.5226C123.315 23.8786 118.281 25.8617 118.281 30.9974C118.281 36.1331 122.146 38.7264 126.926 38.7264C130.587 38.7264 133.434 37.0993 134.451 35.3196ZM129.926 27.3363L134.349 27.0821V31.6076C133.485 32.828 131.604 34.3026 129.061 34.3026C126.366 34.3026 124.79 32.8788 124.79 30.794C124.79 28.7092 126.468 27.5397 129.926 27.3363Z" fill="white"/>
+          <path d="M84.6788 27.9465H102.781C102.781 27.9465 102.883 25.9125 102.883 24.6413C102.883 18.0818 98.3063 13.0986 90.7298 13.0986C83.7127 13.0986 77.9668 18.3869 77.9668 26.2685C77.9668 34.2009 83.4585 38.7264 90.8824 38.7264C96.8826 38.7264 100.595 36.184 101.967 34.7602L99.425 31.2517C98.2555 32.2686 95.3062 33.7432 92.0011 33.7432C88.2891 33.7432 85.289 31.8618 84.6788 27.9465ZM90.679 17.9293C95.2554 17.9293 96.2724 21.031 96.3741 23.726H84.5771C84.7805 20.6243 86.8145 17.9293 90.679 17.9293Z" fill="white"/>
+          <path d="M63.8193 6.35938V32.6722H76.0738V38.1639H57.2598V6.35938L63.8193 6.35938Z" fill="white"/>
+          <path d="M113.915 6.35938V38.1639H107.457V6.35938L113.915 6.35938Z" fill="white"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M200 6.35938V38.1639H193.847L193.796 34.2994H193.644C191.661 37.452 188.61 38.7232 185.203 38.7232C177.982 38.7232 173.559 33.1298 173.559 25.8076C173.559 18.8413 178.186 13.0954 185.661 13.0954C188.966 13.0954 191.762 14.3158 193.491 16.9599H193.593C193.542 15.8412 193.542 14.5192 193.542 12.7903V6.35938L200 6.35938ZM180.169 25.8076C180.169 30.0789 182.813 33.4349 187.034 33.4349C190.949 33.4349 193.695 30.4348 193.695 25.8076C193.695 21.6889 191 18.0786 186.83 18.0786C182.61 18.0786 180.169 21.6889 180.169 25.8076Z" fill="white"/>
+        </svg>
+      </div>
+
+      <p class="eyebrow">Leland Career Bootcamp</p>
+      <h1>Land Your Job with AI Agents and Human Relationships</h1>
+      <p class="subheadline">6 live sessions. Build AI systems that find opportunities for you. Master the human skills that close offers. Walk away with real tools, real connections, and a portfolio that proves you're AI-native.</p>
+
+      <div class="cta-group">
+        <a href="#reserve" class="btn-primary">Reserve Your Spot for $699</a>
+        <p class="cta-sub">Includes $20 in AI credits (Claude or OpenAI)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ 2. STATS BAR ═══════ -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">65%</div>
+          <div class="stat-label">of job seekers already use AI. Are&nbsp;you?</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">2.7x</div>
+          <div class="stat-label">more applications per role than 3&nbsp;years&nbsp;ago</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3x</div>
+          <div class="stat-label">more likely to land an interview via&nbsp;referral</div>
+        </div>
+      </div>
+      <p class="bridge">The job market has split in two. You need AI to get through the door, and human skills to get the offer. This bootcamp teaches both.</p>
+    </div>
+  </section>
+
+  <!-- ═══════ 3. SESSIONS ═══════ -->
+  <section class="sessions">
+    <div class="container">
+      <h2>6 Sessions. 6 Deliverables. Zero Fluff.</h2>
+      <p class="section-sub">Every session ends with something you can use the next day.</p>
+
+      <div class="session-grid">
+        <!-- Session 1 -->
+        <div class="session-card">
+          <span class="session-badge">1</span>
+          <h3>Build Your AI Job-Finding Engine</h3>
+          <p class="desc">Use AI to find the right opportunities intelligently. Build an agent that scans job boards, growth signals, and hiring announcements so you can focus on the roles that actually fit.</p>
+          <p class="deliverable">Deliverable: A working AI agent that sources opportunities daily</p>
+        </div>
+
+        <!-- Session 2 -->
+        <div class="session-card">
+          <span class="session-badge">2</span>
+          <h3>Turn Cold Outreach into Warm Conversations</h3>
+          <p class="desc">Learn who to connect with, how to write messages that get replies, and how to have conversations that lead to real next steps.</p>
+          <p class="deliverable">Deliverable: 5 real outreach messages sent + 1 live role-play</p>
+        </div>
+
+        <!-- Session 3 -->
+        <div class="session-card">
+          <span class="session-badge">3</span>
+          <h3>Beat the Bots, Impress the Humans</h3>
+          <p class="desc">Optimize your resume and LinkedIn for both ATS algorithms and human readers. Find your authentic posting topics and build your personal brand.</p>
+          <p class="deliverable">Deliverable: Refined resume, LinkedIn profile, and a drafted post</p>
+        </div>
+
+        <!-- Session 4 -->
+        <div class="session-card">
+          <span class="session-badge">4</span>
+          <h3>Build an AI Project That Gets You Hired</h3>
+          <p class="desc">Build an automated workflow using Claude Code to demonstrate AI-native skills. Create a portfolio piece that demonstrates what you can do, and learn to talk about it in interviews.</p>
+          <p class="deliverable">Deliverable: A portfolio AI project for GitHub and LinkedIn</p>
+        </div>
+
+        <!-- Session 5 -->
+        <div class="session-card">
+          <span class="session-badge">5</span>
+          <h3>Own Your Story: Behavioral Interview Excellence</h3>
+          <p class="desc">Craft the "tell me about yourself" answer that opens doors. Practice the intangibles: energy, specificity, and authentic presence.</p>
+          <p class="deliverable">Deliverable: A polished "tell me about yourself" script</p>
+        </div>
+
+        <!-- Session 6 -->
+        <div class="session-card">
+          <span class="session-badge">6</span>
+          <h3>Ace Cases, Take-Homes, and Live Challenges</h3>
+          <p class="desc">Master the universal framework for any skills assessment: take-home projects, case interviews, live challenges, and presentations.</p>
+          <p class="deliverable">Deliverable: A completed practice assessment + reusable framework</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ 4. COACHES ═══════ -->
+  <section class="coaches">
+    <div class="container">
+      <h2>Learn From Coaches Who've Been There</h2>
+      <p class="section-sub">Expert-led sessions from professionals at the top of their fields.</p>
+
+      <div class="coach-grid">
+        <!-- Coach 1 -->
+        <div class="coach-card">
+          <span class="coach-session-tag">Session 1 &middot; AI Sourcing</span>
+          <h3><a href="https://www.joinleland.com/coach/logan-k" target="_blank" rel="noopener">Logan K.</a></h3>
+          <p class="coach-title">AI Program Director, Fabletics | Stanford</p>
+          <p class="coach-cred">Supercoach with 27 reviews. Built Fabletics' AI function from the ground up, partnering directly with the President and COO to launch AI initiatives.</p>
+          <!-- TODO: Replace with real review quote from Logan's profile -->
+          <p class="coach-review">"Logan turns drive into clarity. He helped me build the confidence, systems, and focus I needed to succeed."</p>
+          <div class="coach-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0
+            <span style="margin-left: auto;"><a href="https://www.joinleland.com/coach/logan-k" target="_blank" rel="noopener" class="coach-profile-link">View Profile &rarr;</a></span>
+          </div>
+        </div>
+
+        <!-- Coach 2 -->
+        <div class="coach-card">
+          <span class="coach-session-tag">Session 2 &middot; Networking</span>
+          <h3><a href="https://www.joinleland.com/coach/kevin-l-1" target="_blank" rel="noopener">Kevin L.</a></h3>
+          <p class="coach-title">Networking Specialist | Ex-Google (8 Years)</p>
+          <p class="coach-cred">Responsible for acquiring over $10M in new revenue for Google each year. Has coached junior sellers, VPs, and C-level executives on how to build relationships that drive results.</p>
+          <!-- TODO: Replace with real review quote from Kevin's profile -->
+          <p class="coach-review">"Kevin truly believes in the potential of people. He helped me think through my approach and develop a game plan I could actually execute."</p>
+          <div class="coach-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0
+            <span style="margin-left: auto;"><a href="https://www.joinleland.com/coach/kevin-l-1" target="_blank" rel="noopener" class="coach-profile-link">View Profile &rarr;</a></span>
+          </div>
+        </div>
+
+        <!-- Coach 3 -->
+        <div class="coach-card">
+          <span class="coach-session-tag">Session 3 &middot; Resume &amp; Brand</span>
+          <h3><a href="https://www.joinleland.com/coach/bryan-l" target="_blank" rel="noopener">Bryan L.</a></h3>
+          <p class="coach-title">CPRW Certified | Microsoft AI Red Team</p>
+          <p class="coach-cred">500+ clients placed. Certified professional resume writer and LinkedIn specialist with deep tech expertise.</p>
+          <p class="coach-review">"He was honest about areas needing improvement, breaking things down in a simple and easy to understand way."</p>
+          <div class="coach-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0
+            <span style="margin-left: auto;"><a href="https://www.joinleland.com/coach/bryan-l" target="_blank" rel="noopener" class="coach-profile-link">View Profile &rarr;</a></span>
+          </div>
+        </div>
+
+        <!-- Coach 4 -->
+        <div class="coach-card">
+          <span class="coach-session-tag">Session 4 &middot; AI Project</span>
+          <h3><a href="https://www.joinleland.com/coach/andrew-q" target="_blank" rel="noopener">Andrew Q.</a></h3>
+          <p class="coach-title">Head of AI, Spotify | OpenAI Alum</p>
+          <p class="coach-cred">Coached 100+ individuals into top roles at Meta, AWS, SpaceX, DeepMind, Databricks, and Stanford GSB. His approach is blunt, strategic, and results-driven.</p>
+          <!-- TODO: Replace with real review quote from Andrew's profile -->
+          <p class="coach-review">"Andrew helped me position myself as AI-ready talent. His hands-on approach to agent development was exactly what I needed."</p>
+          <div class="coach-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0
+            <span style="margin-left: auto;"><a href="https://www.joinleland.com/coach/andrew-q" target="_blank" rel="noopener" class="coach-profile-link">View Profile &rarr;</a></span>
+          </div>
+        </div>
+
+        <!-- Coach 5 -->
+        <div class="coach-card">
+          <span class="coach-session-tag">Session 5 &middot; Behavioral</span>
+          <h3><a href="https://www.joinleland.com/coach/kira-d" target="_blank" rel="noopener">Kira D.</a></h3>
+          <p class="coach-title">Ex-Disney Recruiter | 10+ Years Interviewing</p>
+          <p class="coach-cred">Supercoach with 42 reviews. 10+ years interviewing candidates at Disney, Lucasfilm, and ILM. Knows exactly what makes someone memorable.</p>
+          <p class="coach-review">"From the very first session, Kira brought a rare combination of compassion, insight, and strategy that made all the difference."</p>
+          <div class="coach-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0
+            <span style="margin-left: auto;"><a href="https://www.joinleland.com/coach/kira-d" target="_blank" rel="noopener" class="coach-profile-link">View Profile &rarr;</a></span>
+          </div>
+        </div>
+
+        <!-- Coach 6 -->
+        <div class="coach-card">
+          <span class="coach-session-tag">Session 6 &middot; Assessments</span>
+          <h3><a href="https://www.joinleland.com/coach/emily-h-1" target="_blank" rel="noopener">Emily H.</a></h3>
+          <p class="coach-title">McKinsey Interviewer | 90% Success Rate</p>
+          <p class="coach-cred">200+ cases coached with a 90% success rate. Expert at both case and behavioral interview preparation.</p>
+          <p class="coach-review">"I went from someone who didn't even know what a case interview was to someone who got an offer from an MBB firm."</p>
+          <div class="coach-rating">
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0
+            <span style="margin-left: auto;"><a href="https://www.joinleland.com/coach/emily-h-1" target="_blank" rel="noopener" class="coach-profile-link">View Profile &rarr;</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ 5. DIFFERENTIATORS ═══════ -->
+  <section class="differentiators">
+    <div class="container">
+      <h2>What Makes This Different</h2>
+
+      <div class="diff-grid">
+        <div class="diff-item">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L12.09 7.26L18 8.27L14 12.14L14.18 18.02L10 15.77L5.82 18.02L6 12.14L2 8.27L7.91 7.26L10 2Z" fill="#15B078"/></svg>
+          </div>
+          <div class="diff-text">
+            <h3>You'll Build Real AI Agents</h3>
+            <p>You'll build AI agents that scan job boards, identify warm connections, and surface opportunities while you sleep. This is hands-on: you write the code, you own the tool.</p>
+          </div>
+        </div>
+
+        <div class="diff-item">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L12.09 7.26L18 8.27L14 12.14L14.18 18.02L10 15.77L5.82 18.02L6 12.14L2 8.27L7.91 7.26L10 2Z" fill="#15B078"/></svg>
+          </div>
+          <div class="diff-text">
+            <h3>Five Conversations Beat 200 Applications</h3>
+            <p>We've seen it over and over: the people who land fastest are the ones who build real connections. You'll learn exactly who to reach out to, what to say, and how to turn a conversation into a next step.</p>
+          </div>
+        </div>
+
+        <div class="diff-item">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L12.09 7.26L18 8.27L14 12.14L14.18 18.02L10 15.77L5.82 18.02L6 12.14L2 8.27L7.91 7.26L10 2Z" fill="#15B078"/></svg>
+          </div>
+          <div class="diff-text">
+            <h3>You Leave with Real Deliverables</h3>
+            <p>Every session produces something tangible: an agent, outreach messages, a resume, a portfolio project, a practiced script, a completed case. These are yours to use the next day.</p>
+          </div>
+        </div>
+
+        <div class="diff-item">
+          <div class="diff-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L12.09 7.26L18 8.27L14 12.14L14.18 18.02L10 15.77L5.82 18.02L6 12.14L2 8.27L7.91 7.26L10 2Z" fill="#15B078"/></svg>
+          </div>
+          <div class="diff-text">
+            <h3>Built for Momentum</h3>
+            <p>Every session ends with something real you can put to work immediately. Your search gets stronger with each session, and you'll feel it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ 6. AI CREDIT BONUS ═══════ -->
+  <section class="ai-credit">
+    <div class="container">
+      <div class="ai-credit-inner">
+        <h2>$20 in AI Credits, On Us</h2>
+        <p>Every participant gets a Claude or OpenAI credit. Build your AI agent in Session&nbsp;1. Create your portfolio project in Session&nbsp;4. Keep using it after the bootcamp ends. Think of it as your first AI employee.</p>
+        <a href="#reserve" class="btn-primary">Reserve Your Spot for $699</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ 7. WHO THIS IS FOR ═══════ -->
+  <section class="audience">
+    <div class="container">
+      <h2>Built for Job Seekers Who Want an Edge</h2>
+
+      <div class="audience-grid">
+        <div class="audience-card">
+          <div class="audience-icon" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#15B078" stroke-width="2" fill="none"/><path d="M20 12v8l5 3" stroke="#15B078" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Early Career</h3>
+          <p>Looking for your first or second role. Ready to stand out from hundreds of applicants with real skills and real tools.</p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-icon" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#15B078" stroke-width="2" fill="none"/><path d="M14 26l4-12 4 8 4-4" stroke="#15B078" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Mid-Career</h3>
+          <p>5&ndash;15 years in. You know what you want. Now you need a system to find and land it faster than scrolling job boards.</p>
+        </div>
+
+        <div class="audience-card">
+          <div class="audience-icon" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#15B078" stroke-width="2" fill="none"/><path d="M14 20h12M20 14l6 6-6 6" stroke="#15B078" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Career Changers</h3>
+          <p>Pivoting industries or functions. Ready to reposition your story and build the skills that prove you belong.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ 8. FAQ ═══════ -->
+  <section class="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do I need to be technical?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">No. Sessions 1 and 4 involve building with AI tools, but you'll follow guided templates with instructor support. If you can use a web browser, you can do this. Engineers will find ways to go deeper, and non-technical participants succeed every cohort.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What tools will I need?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">A laptop with a web browser. We'll use Claude or ChatGPT (your $20 credit covers this), LinkedIn, and Google Docs. No special software to install before the first session.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How long are the sessions?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Each session is 90 minutes, held live over video. Sessions are a mix of instruction, live demos, and hands-on workshops, so the time moves fast.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is there a recording if I miss one?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes. Every session is recorded and available within 24 hours. You'll also get the slides, templates, and any code used in the session. That said, the live workshops and role plays are where the real learning happens, so we recommend attending live.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What's included in the $20 AI credit?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">You'll receive a $20 credit for Claude (Anthropic) or OpenAI, your choice. This covers the AI usage for both agent-building sessions and gives you credits to keep using your tools after the bootcamp.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What if I'm not currently job searching?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">The skills transfer. Building AI agents, networking effectively, and interviewing well are career accelerators whether you're actively searching or preparing for a future move. Many participants join to future-proof their toolkit.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How big are the cohorts?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">25&ndash;50 participants. Small enough for real interaction and breakout room workshops, large enough for a diverse peer network. Role plays and hands-on sessions use small groups for personalized feedback.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What's the refund policy?
+            <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Full refund if you cancel before the first session. After Session 1, we offer a 50% refund if the bootcamp isn't the right fit. We want you here because it's working for you.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════ 9. FINAL CTA ═══════ -->
+  <section class="final-cta" id="reserve">
+    <div class="container">
+      <h2>Your Next Role Is Closer Than You Think</h2>
+      <div class="price">$699</div>
+      <p class="includes">6 live sessions + $20 AI credits + recordings + community</p>
+      <a href="#reserve" class="btn-primary">Reserve Your Spot</a>
+      <p class="contact">Questions? Email <a href="mailto:bootcamp@joinleland.com">bootcamp@joinleland.com</a></p>
+    </div>
+  </section>
+
+  <!-- ═══════ 10. FOOTER ═══════ -->
+  <footer class="footer">
+    <div class="container">
+      <svg width="200" height="45" viewBox="0 0 200 45" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Leland">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M41.0778 3.86523L13.0702 12.2675L3.73438 41.2086L32.6755 32.8064L41.0778 3.86523ZM22.4056 27.2048C24.9836 27.2048 27.0735 25.1149 27.0735 22.5369C27.0735 19.9588 24.9836 17.8689 22.4056 17.8689C19.8276 17.8689 17.7377 19.9588 17.7377 22.5369C17.7377 25.1149 19.8276 27.2048 22.4056 27.2048Z" fill="white"/>
+        <path d="M162.705 24.9972V38.1671H169.214V23.5735C169.214 17.675 167.434 13.0986 160.366 13.0986C156.807 13.0986 154.315 14.6749 152.993 17.2682H152.841L152.891 13.5563H146.383V38.1671H152.891V25.9125C152.891 21.7938 154.264 18.4378 158.281 18.4378C162.044 18.4378 162.705 21.3361 162.705 24.9972Z" fill="white"/>
+        <path d="M134.451 35.3196L134.553 38.1671H140.807V24.082C140.807 19.9124 139.892 17.675 138.112 15.9462C136.282 14.2173 133.79 13.0986 129.417 13.0986C125.146 13.0986 121.688 14.5732 119.807 15.6919L121.79 19.8615C122.858 19.0479 125.553 17.8276 128.807 17.8276C132.214 17.8276 134.299 19.3022 134.299 22.4548V23.1158L128.4 23.5226C123.315 23.8786 118.281 25.8617 118.281 30.9974C118.281 36.1331 122.146 38.7264 126.926 38.7264C130.587 38.7264 133.434 37.0993 134.451 35.3196ZM129.926 27.3363L134.349 27.0821V31.6076C133.485 32.828 131.604 34.3026 129.061 34.3026C126.366 34.3026 124.79 32.8788 124.79 30.794C124.79 28.7092 126.468 27.5397 129.926 27.3363Z" fill="white"/>
+        <path d="M84.6788 27.9465H102.781C102.781 27.9465 102.883 25.9125 102.883 24.6413C102.883 18.0818 98.3063 13.0986 90.7298 13.0986C83.7127 13.0986 77.9668 18.3869 77.9668 26.2685C77.9668 34.2009 83.4585 38.7264 90.8824 38.7264C96.8826 38.7264 100.595 36.184 101.967 34.7602L99.425 31.2517C98.2555 32.2686 95.3062 33.7432 92.0011 33.7432C88.2891 33.7432 85.289 31.8618 84.6788 27.9465ZM90.679 17.9293C95.2554 17.9293 96.2724 21.031 96.3741 23.726H84.5771C84.7805 20.6243 86.8145 17.9293 90.679 17.9293Z" fill="white"/>
+        <path d="M63.8193 6.35938V32.6722H76.0738V38.1639H57.2598V6.35938L63.8193 6.35938Z" fill="white"/>
+        <path d="M113.915 6.35938V38.1639H107.457V6.35938L113.915 6.35938Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M200 6.35938V38.1639H193.847L193.796 34.2994H193.644C191.661 37.452 188.61 38.7232 185.203 38.7232C177.982 38.7232 173.559 33.1298 173.559 25.8076C173.559 18.8413 178.186 13.0954 185.661 13.0954C188.966 13.0954 191.762 14.3158 193.491 16.9599H193.593C193.542 15.8412 193.542 14.5192 193.542 12.7903V6.35938L200 6.35938ZM180.169 25.8076C180.169 30.0789 182.813 33.4349 187.034 33.4349C190.949 33.4349 193.695 30.4348 193.695 25.8076C193.695 21.6889 191 18.0786 186.83 18.0786C182.61 18.0786 180.169 21.6889 180.169 25.8076Z" fill="white"/>
+      </svg>
+      <p>&copy; 2026 Leland</p>
+    </div>
+  </footer>
+
+  <!-- ═══════ FAQ ACCORDION SCRIPT ═══════ -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var answer = item.querySelector('.faq-answer');
+        var isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(function(i) {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        // Open clicked (if it was closed)
+        if (!isOpen) {
+          item.classList.add('open');
+          this.setAttribute('aria-expanded', 'true');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
