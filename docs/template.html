@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{BOOTCAMP_TITLE}} | Leland</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Full CSS copied from production page. See landing-page-playbook.md for design system reference. */
+/* When creating a new page, copy CSS from the most recent production landing page. */
+/* The production page contains ~420 lines of CSS covering:
+   - Reset, CSS variables (:root), layout (.container, section)
+   - Typography (h1-h3, .eyebrow, responsive)
+   - Buttons (.btn, .btn-primary, .btn-outline, .btn-lg)
+   - Nav (fixed, dark bg, blur)
+   - Hero (background image, overlay, countdown, trust pills)
+   - Problem (.pain-card grid)
+   - Solution (.deliverable grid with numbered badges)
+   - Curriculum (.session accordion with chevron toggle)
+   - Comparison (desktop table + mobile stacked cards)
+   - Value Stack (dark bg, check grid, pricing tiers)
+   - Audience (.audience-card grid)
+   - Instructors (.instructor-card with avatar, rating, tags)
+   - Testimonials (.testimonial-card with star row, blockquote)
+   - Pricing (.pricing-card with anchor pricing, discount box)
+   - FAQ (.faq-item accordion)
+   - Final CTA (background image, overlay)
+   - Footer
+   - Mobile sticky CTA (appears below 768px)
+   - Inline SVG icon helpers (.svg-icon, .star-row)
+   - Countdown timer (.countdown pill)
+   - Sources footnotes
+*/
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="container">
+    <a href="https://www.joinleland.com" class="logo" aria-label="Leland">
+      <!-- Leland SVG logo (copy from production page) -->
+    </a>
+    <a href="{{CHECKOUT_URL}}" class="btn btn-primary">Enroll Now</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" style="background: linear-gradient(165deg, rgba(0,0,0,{{HERO_OVERLAY_OPACITY}}) 0%, rgba(0,0,0,{{HERO_OVERLAY_OPACITY}}) 100%), url('img/{{HERO_IMAGE}}') center 30%/cover no-repeat;">
+  <div class="container">
+    <div class="countdown" id="countdown">
+      <span class="cd-label">Starts in:</span>
+      <div class="cd-units">
+        <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-lbl">Days</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-lbl">Hrs</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-lbl">Min</span></div>
+        <span class="cd-sep">:</span>
+        <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-lbl">Sec</span></div>
+      </div>
+    </div>
+    <h1>{{BOOTCAMP_TITLE}}</h1>
+    <p>{{VALUE_PROP}}</p>
+    <div class="trust-strip">
+      <div class="trust-pill"><span class="pill-num">{{TRUST_PILL_1_NUM}}</span> {{TRUST_PILL_1_LABEL}}</div>
+      <div class="trust-pill"><span class="pill-num">{{TRUST_PILL_2_NUM}}</span> {{TRUST_PILL_2_LABEL}}</div>
+      <div class="trust-pill"><span class="pill-num">{{TRUST_PILL_3_NUM}}</span> {{TRUST_PILL_3_LABEL}}</div>
+      <div class="trust-pill"><span class="pill-num">{{TRUST_PILL_4_NUM}}</span> {{TRUST_PILL_4_LABEL}}</div>
+    </div>
+    <div class="hero-ctas">
+      <a href="#curriculum" class="btn btn-outline">See Curriculum</a>
+    </div>
+  </div>
+</section>
+
+<!-- Problem -->
+<section class="problem">
+  <div class="container">
+    <h2>{{PROBLEM_HEADLINE}}</h2>
+    <p style="max-width: 640px; font-size: 1.05rem;">{{PROBLEM_LEAD_STAT}}</p>
+    <div class="problem-grid">
+      <div class="pain-card">
+        <div class="pain-icon"><!-- SVG icon --></div>
+        <h3>{{PAIN_1_TITLE}}</h3>
+        <p>{{PAIN_1_DESC}}</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon"><!-- SVG icon --></div>
+        <h3>{{PAIN_2_TITLE}}</h3>
+        <p>{{PAIN_2_DESC}}</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon"><!-- SVG icon --></div>
+        <h3>{{PAIN_3_TITLE}}</h3>
+        <p>{{PAIN_3_DESC}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution -->
+<section class="solution">
+  <div class="container">
+    <p class="eyebrow">What You'll Build</p>
+    <h2>6 sessions. Everything you need.</h2>
+    <div class="solution-grid">
+      <div class="deliverable"><div class="d-num">1</div><div><h3>{{DELIVERABLE_1_TITLE}}</h3><p>{{DELIVERABLE_1_DESC}}</p></div></div>
+      <div class="deliverable"><div class="d-num">2</div><div><h3>{{DELIVERABLE_2_TITLE}}</h3><p>{{DELIVERABLE_2_DESC}}</p></div></div>
+      <div class="deliverable"><div class="d-num">3</div><div><h3>{{DELIVERABLE_3_TITLE}}</h3><p>{{DELIVERABLE_3_DESC}}</p></div></div>
+      <div class="deliverable"><div class="d-num">4</div><div><h3>{{DELIVERABLE_4_TITLE}}</h3><p>{{DELIVERABLE_4_DESC}}</p></div></div>
+      <div class="deliverable"><div class="d-num">5</div><div><h3>{{DELIVERABLE_5_TITLE}}</h3><p>{{DELIVERABLE_5_DESC}}</p></div></div>
+      <div class="deliverable"><div class="d-num">6</div><div><h3>{{DELIVERABLE_6_TITLE}}</h3><p>{{DELIVERABLE_6_DESC}}</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison -->
+<section class="comparison">
+  <div class="container">
+    <h2 style="text-align: center;">How we compare</h2>
+    <p style="text-align: center; max-width: 640px; margin: 0 auto; font-size: 1.05rem;">There are many ways to get help. Here&rsquo;s how this bootcamp stacks up.</p>
+    <!-- Desktop table -->
+    <div class="comparison-table-wrap">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="highlight">Leland ({{SALE_PRICE}})</th>
+            <th>{{COMPETITOR_1_NAME}} ({{COMPETITOR_1_PRICE}})</th>
+            <th>{{COMPETITOR_2_NAME}} ({{COMPETITOR_2_PRICE}})</th>
+            <th>{{COMPETITOR_3_NAME}} ({{COMPETITOR_3_PRICE}})</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Comparison rows: copy pattern from production page -->
+          <!-- Each row: <td>Feature</td> <td class="highlight">Leland value</td> <td>Comp value</td> ... -->
+        </tbody>
+      </table>
+    </div>
+    <!-- Mobile stacked cards -->
+    <div class="comparison-mobile">
+      <!-- Copy mobile card pattern from production page -->
+    </div>
+  </div>
+</section>
+
+<!-- Value Stack -->
+<section class="value-section">
+  <div class="container">
+    <p class="eyebrow">Everything You Get</p>
+    <h2>Invest in a complete system.</h2>
+    <div class="value-grid">
+      <div class="value-item"><span class="v-check">&#10003;</span><div><h4>{{VALUE_ITEM_1_TITLE}}</h4><p>{{VALUE_ITEM_1_DESC}}</p></div></div>
+      <div class="value-item"><span class="v-check">&#10003;</span><div><h4>{{VALUE_ITEM_2_TITLE}}</h4><p>{{VALUE_ITEM_2_DESC}}</p></div></div>
+      <div class="value-item"><span class="v-check">&#10003;</span><div><h4>{{VALUE_ITEM_3_TITLE}}</h4><p>{{VALUE_ITEM_3_DESC}}</p></div></div>
+      <div class="value-item"><span class="v-check">&#10003;</span><div><h4>{{VALUE_ITEM_4_TITLE}}</h4><p>{{VALUE_ITEM_4_DESC}}</p></div></div>
+      <div class="value-item"><span class="v-check">&#10003;</span><div><h4>{{VALUE_ITEM_5_TITLE}}</h4><p>{{VALUE_ITEM_5_DESC}}</p></div></div>
+      <div class="value-item"><span class="v-check">&#10003;</span><div><h4>{{VALUE_ITEM_6_TITLE}}</h4><p>{{VALUE_ITEM_6_DESC}}</p></div></div>
+      <div class="value-item"><span class="v-check">&#10003;</span><div><h4>{{VALUE_ITEM_7_TITLE}}</h4><p>{{VALUE_ITEM_7_DESC}}</p></div></div>
+      <div class="value-item"><span class="v-check">&#10003;</span><div><h4>{{VALUE_ITEM_8_TITLE}}</h4><p>{{VALUE_ITEM_8_DESC}}</p></div></div>
+    </div>
+    <div class="value-total">
+      <div class="value-pricing-tiers">
+        <div class="value-tier"><span class="tier-label">Total value</span><span class="tier-price struck">$3,000+</span></div>
+        <div class="value-tier"><span class="tier-label">Our price</span><span class="tier-price struck-med">{{REGULAR_PRICE}}</span></div>
+        <div class="value-tier"><span class="tier-label">With {{DISCOUNT_CODE}}</span><span class="tier-price featured">{{SALE_PRICE}}</span></div>
+      </div>
+      <p class="discount-note">Enter code <code>{{DISCOUNT_CODE}}</code> at checkout</p>
+      <a href="{{CHECKOUT_URL}}" class="btn btn-primary btn-lg">Enroll Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Who It's For -->
+<section class="audience">
+  <div class="container">
+    <p class="eyebrow">Who This Is For</p>
+    <h2>Whether you're starting out, switching fields, or leveling up.</h2>
+    <div class="audience-grid">
+      <div class="audience-card"><div class="a-icon"><!-- SVG icon --></div><h3>{{AUDIENCE_1_TITLE}}</h3><p>{{AUDIENCE_1_DESC}}</p></div>
+      <div class="audience-card"><div class="a-icon"><!-- SVG icon --></div><h3>{{AUDIENCE_2_TITLE}}</h3><p>{{AUDIENCE_2_DESC}}</p></div>
+      <div class="audience-card"><div class="a-icon"><!-- SVG icon --></div><h3>{{AUDIENCE_3_TITLE}}</h3><p>{{AUDIENCE_3_DESC}}</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Curriculum -->
+<section class="curriculum" id="curriculum">
+  <div class="container">
+    <p class="eyebrow">The Curriculum</p>
+    <h2>Expert-led sessions designed to get results</h2>
+    <p style="max-width: 640px; font-size: 1.05rem;">{{COHORT_SCHEDULE}}, 90 minutes each. All sessions are live on Zoom and recorded.</p>
+    <div class="session-list">
+
+      <div class="session">
+        <div class="session-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="session-num">01</div>
+          <div class="session-info"><h3>{{SESSION_1_TITLE}}</h3><div class="session-date">{{SESSION_1_DATE}}</div></div>
+          <svg class="session-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="session-body"><p>{{SESSION_1_DESC}}</p><div class="session-deliverable">&#10003; Deliverable: {{SESSION_1_DELIVERABLE}}</div></div>
+      </div>
+
+      <div class="session">
+        <div class="session-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="session-num">02</div>
+          <div class="session-info"><h3>{{SESSION_2_TITLE}}</h3><div class="session-date">{{SESSION_2_DATE}}</div></div>
+          <svg class="session-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="session-body"><p>{{SESSION_2_DESC}}</p><div class="session-deliverable">&#10003; Deliverable: {{SESSION_2_DELIVERABLE}}</div></div>
+      </div>
+
+      <div class="session">
+        <div class="session-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="session-num">03</div>
+          <div class="session-info"><h3>{{SESSION_3_TITLE}}</h3><div class="session-date">{{SESSION_3_DATE}}</div></div>
+          <svg class="session-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="session-body"><p>{{SESSION_3_DESC}}</p><div class="session-deliverable">&#10003; Deliverable: {{SESSION_3_DELIVERABLE}}</div></div>
+      </div>
+
+      <div class="session">
+        <div class="session-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="session-num">04</div>
+          <div class="session-info"><h3>{{SESSION_4_TITLE}}</h3><div class="session-date">{{SESSION_4_DATE}}</div></div>
+          <svg class="session-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="session-body"><p>{{SESSION_4_DESC}}</p><div class="session-deliverable">&#10003; Deliverable: {{SESSION_4_DELIVERABLE}}</div></div>
+      </div>
+
+      <div class="session">
+        <div class="session-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="session-num">05</div>
+          <div class="session-info"><h3>{{SESSION_5_TITLE}}</h3><div class="session-date">{{SESSION_5_DATE}}</div></div>
+          <svg class="session-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="session-body"><p>{{SESSION_5_DESC}}</p><div class="session-deliverable">&#10003; Deliverable: {{SESSION_5_DELIVERABLE}}</div></div>
+      </div>
+
+      <div class="session">
+        <div class="session-header" onclick="this.parentElement.classList.toggle('open')">
+          <div class="session-num">06</div>
+          <div class="session-info"><h3>{{SESSION_6_TITLE}}</h3><div class="session-date">{{SESSION_6_DATE}}</div></div>
+          <svg class="session-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="session-body"><p>{{SESSION_6_DESC}}</p><div class="session-deliverable">&#10003; Deliverable: {{SESSION_6_DELIVERABLE}}</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Instructors -->
+<section class="instructors">
+  <div class="container">
+    <p class="eyebrow">Your Coaches</p>
+    <h2>Learn from expert coaches</h2>
+    <p style="max-width: 640px; font-size: 1.05rem;">Each session is led by a top-rated Leland coach with deep expertise in that topic.</p>
+    <div class="instructor-grid">
+      <!-- Repeat this block for each coach (up to 6). Copy SVG icons from production page. -->
+      <a href="https://www.joinleland.com/coach/{{COACH_1_SLUG}}" class="instructor-card-link" target="_blank">
+      <div class="instructor-card">
+        <div class="instructor-card-top"><div class="instructor-avatar"><img src="https://leland.imgix.net/profile-photos/{{COACH_1_PHOTO}}?w=128&h=128&fit=crop" alt="{{COACH_1_NAME}}" onerror="this.style.display='none';this.parentElement.textContent='{{COACH_1_INITIALS}}';"></div></div>
+        <div class="instructor-name-row"><div class="instructor-name">{{COACH_1_NAME}}</div><span class="instructor-rating"><!-- star SVG --> {{COACH_1_RATING}} ({{COACH_1_REVIEWS}})</span></div>
+        <div class="instructor-tagline">{{COACH_1_TAGLINE}}</div>
+        <div class="instructor-tags"><div class="instructor-tag"><!-- briefcase SVG --> {{COACH_1_TAG1}}</div><div class="instructor-tag"><!-- education SVG --> {{COACH_1_TAG2}}</div></div>
+      </div>
+      </a>
+      <!-- Coach 2 through 6: same pattern with {{COACH_2_*}} through {{COACH_6_*}} -->
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="container">
+    <p class="eyebrow">What People Are Saying</p>
+    <h2>From the Leland community</h2>
+    <div class="testimonial-grid">
+      <!-- Repeat for each testimonial (3). Copy 5-star SVG row from production page. -->
+      <div class="testimonial-card">
+        <div class="star-row"><!-- 5x star SVGs --></div>
+        <p class="review-headline">"{{TESTIMONIAL_1_HEADLINE}}"</p>
+        <blockquote>"{{TESTIMONIAL_1_QUOTE}}"</blockquote>
+        <div class="author"><div class="avatar">{{TESTIMONIAL_1_INITIALS}}</div><div class="author-info"><div class="name">{{TESTIMONIAL_1_AUTHOR}}</div><div class="role">{{TESTIMONIAL_1_ROLE}}</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="star-row"><!-- 5x star SVGs --></div>
+        <p class="review-headline">"{{TESTIMONIAL_2_HEADLINE}}"</p>
+        <blockquote>"{{TESTIMONIAL_2_QUOTE}}"</blockquote>
+        <div class="author"><div class="avatar">{{TESTIMONIAL_2_INITIALS}}</div><div class="author-info"><div class="name">{{TESTIMONIAL_2_AUTHOR}}</div><div class="role">{{TESTIMONIAL_2_ROLE}}</div></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="star-row"><!-- 5x star SVGs --></div>
+        <p class="review-headline">"{{TESTIMONIAL_3_HEADLINE}}"</p>
+        <blockquote>"{{TESTIMONIAL_3_QUOTE}}"</blockquote>
+        <div class="author"><div class="avatar">{{TESTIMONIAL_3_INITIALS}}</div><div class="author-info"><div class="name">{{TESTIMONIAL_3_AUTHOR}}</div><div class="role">{{TESTIMONIAL_3_ROLE}}</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <h2 style="text-align: center;">Invest in your career.</h2>
+    <div class="pricing-card">
+      <div class="popular-badge">{{SEATS_LEFT}} Seats Left</div>
+      <h3 style="font-size: 1.3rem; margin-top: 12px;">{{BOOTCAMP_TITLE}}</h3>
+      <p style="font-size: 0.95rem; margin-top: 8px;">6 live sessions &middot; {{COHORT_DATES}}</p>
+      <div class="pricing-anchor">
+        <div class="anchor-item"><div class="anchor-label">1:1 coaching</div><div class="anchor-price muted">$3,000+</div></div>
+        <div class="anchor-item"><div class="anchor-label">This bootcamp</div><div class="anchor-price muted">{{REGULAR_PRICE}}</div></div>
+        <div class="anchor-item"><div class="anchor-label">With {{DISCOUNT_CODE}}</div><div class="anchor-price highlight">{{SALE_PRICE}}</div></div>
+      </div>
+      <div class="discount-box"><p>Use code <code>{{DISCOUNT_CODE}}</code> for {{DISCOUNT_AMOUNT}} off</p></div>
+      <ul class="pricing-features">
+        <!-- List 7-8 included features with checkmarks -->
+        <li><span class="pf-check">&#10003;</span> Feature 1</li>
+        <li><span class="pf-check">&#10003;</span> Feature 2</li>
+      </ul>
+      <a href="{{CHECKOUT_URL}}" class="btn btn-primary btn-lg" style="width: 100%;">Enroll Now, <s>{{REGULAR_PRICE}}</s> {{SALE_PRICE}}</a>
+      <p class="pricing-dates">Cohort: {{COHORT_DATES}} &middot; {{COHORT_SCHEDULE}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <h2 style="text-align: center;">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <!-- Repeat for each FAQ (up to 8) -->
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h3>{{FAQ_1_Q}}</h3><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-a"><p>{{FAQ_1_A}}</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h3>{{FAQ_2_Q}}</h3><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-a"><p>{{FAQ_2_A}}</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h3>{{FAQ_3_Q}}</h3><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-a"><p>{{FAQ_3_A}}</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h3>{{FAQ_4_Q}}</h3><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-a"><p>{{FAQ_4_A}}</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h3>{{FAQ_5_Q}}</h3><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-a"><p>{{FAQ_5_A}}</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h3>{{FAQ_6_Q}}</h3><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-a"><p>{{FAQ_6_A}}</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h3>{{FAQ_7_Q}}</h3><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-a"><p>{{FAQ_7_A}}</p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><h3>{{FAQ_8_Q}}</h3><svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="faq-a"><p>{{FAQ_8_A}}</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta" style="background: linear-gradient(165deg, rgba(0,0,0,{{FINAL_CTA_OVERLAY_OPACITY}}) 0%, rgba(0,0,0,{{FINAL_CTA_OVERLAY_OPACITY}}) 100%), url('img/{{FINAL_CTA_IMAGE}}') center/cover no-repeat;">
+  <div class="container">
+    <h2>{{FINAL_CTA_HEADLINE}}</h2>
+    <p>{{SEATS_LEFT}} seats left. {{COHORT_DATES}}. Use code <strong style="color: var(--green);">{{DISCOUNT_CODE}}</strong> for {{DISCOUNT_AMOUNT}} off.</p>
+    <a href="{{CHECKOUT_URL}}" class="btn btn-primary btn-lg">Enroll Now, <s>{{REGULAR_PRICE}}</s> {{SALE_PRICE}} with {{DISCOUNT_CODE}}</a>
+    <p class="reassurance">All sessions recorded &middot; Full refund after Session 1 if not satisfied</p>
+  </div>
+</section>
+
+<!-- Sources -->
+<div class="sources">
+  <p><sup>1</sup> {{SOURCE_1}}</p>
+  <p><sup>2</sup> {{SOURCE_2}}</p>
+  <p><sup>3</sup> {{SOURCE_3}}</p>
+  <p><sup>4</sup> {{SOURCE_4}}</p>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 <a href="https://www.joinleland.com">Leland</a>. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Mobile Sticky CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="container">
+    <div class="sticky-price">
+      <span class="original">{{REGULAR_PRICE}}</span> <span class="sale">{{SALE_PRICE}}</span>
+      <span style="font-size: 0.75rem; color: var(--gray-500); display: block;">with code {{DISCOUNT_CODE}}</span>
+    </div>
+    <a href="{{CHECKOUT_URL}}" class="btn btn-primary">Enroll Now</a>
+  </div>
+</div>
+
+<script>
+// Countdown timer
+(function() {
+  const target = new Date('{{COUNTDOWN_TARGET_UTC}}');
+  function update() {
+    const now = new Date();
+    const diff = target - now;
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML = '<span class="cd-label">Bootcamp has started!</span>';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent = d;
+    document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+    document.getElementById('cd-mins').textContent = String(m).padStart(2, '0');
+    document.getElementById('cd-secs').textContent = String(s).padStart(2, '0');
+  }
+  update();
+  setInterval(update, 1000);
+})();
+
+// Show sticky CTA after scrolling past hero
+const stickyCta = document.getElementById('stickyCta');
+const hero = document.querySelector('.hero');
+if (stickyCta && hero) {
+  const observer = new IntersectionObserver(([entry]) => {
+    if (window.innerWidth <= 768) {
+      stickyCta.style.display = entry.isIntersecting ? 'none' : 'block';
+    }
+  }, { threshold: 0 });
+  observer.observe(hero);
+}
+</script>
+
+</body>
+</html>
